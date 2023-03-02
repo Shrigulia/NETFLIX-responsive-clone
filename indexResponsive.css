@@ -75,6 +75,6 @@
 }
 @media screen and (max-width:338px){
     .hamburgerMenu {
-        z-index: 2;
+        z-index: 999;
     }
 }
