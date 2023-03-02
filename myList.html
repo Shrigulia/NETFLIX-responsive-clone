@@ -1,0 +1,116 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Netflix - mylist</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href="mylist.css">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+        <!-- header -->
+        <header id="header">
+            <div class="headerCont container">
+                <!-- left nav  -->
+                <nav class="leftNav">
+                    <figure class="logo">
+                        <img src="images/logo.png" alt="Netflix">
+                    </figure>
+                    <ul class="leftNavCont">
+                        <li class="leftNavItem">Home</li>
+                        <li class="leftNavItem active" >
+                            <a class="linkToFile" href="myList.html">My list</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- left nav end -->
+
+                <!-- right nav  -->
+                <nav class="rightNav">
+
+                    <div class="rightNavItem">
+                        <i class="fa fa-search fa-2x"></i>
+                    </div>
+
+                    <div class="rightNavItem">
+                        <img style="filter: invert(100%);" src="images/notification.png" alt="">
+                    </div>
+                    
+                    <div class="rightNavItem" id="userMenu">
+                        <img src="images/user.jpg" alt="">
+
+                        <div class="userOptCont">
+                            <div class="user" id="user">
+                                <img src="images/user.jpg" alt="">
+                                <p>User 1</p>
+                            </div>
+
+                            <div class="user" id="user">
+                                <img src="images/user.jpg" alt="">
+                                <p>User 2</p>
+                            </div>
+
+                            <div class="user" id="user">
+                                <img src="images/user.jpg" alt="">
+                                <p>User 3</p>
+                            </div>
+
+                            <div class="user" id="user">
+                                <i class="fa fa-pencil fa-2x"></i>
+                                <p>Manage Profile</p>
+                            </div>
+
+                            <div class="user" id="user">
+                                <i class="fa fa-square fa-2x"></i>
+                                <p>Transfer profile</p>
+                            </div>
+
+                            <div class="user" id="user">
+                                <i class="fa fa-user fa-2x"></i>
+                                <p>Account</p>
+                            </div>
+
+                            <div class="user" id="user">
+                                <i class="fa fa-question-circle fa-2x"></i>
+                                <p>Help center</p>
+                            </div>
+
+                            <div class="user" id="signOut">
+                                <p>Sign out Netflix</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+                <!-- right nav end -->
+            </div>
+        </header>
+        <!-- header end -->
+
+
+    <section class="movieSec container" id="movieSec">  
+        <h2 class="gerneHeading">My List</h2>
+        <button id="clearList">clear list</button>
+    </section>
+
+    <script>
+        let section = document.getElementById("movieSec");
+        const div = document.createElement("div");
+        div.className = "gerneCont";
+        div.innerHTML =  JSON.parse(localStorage.getItem("listAdded"))
+        let o = section.appendChild(div) 
+        // console.log(localStorage.getItem("listAdded"))
+        // console.log(o)
+        let clearList = document.getElementById("clearList")
+        clearList.onclick = () =>{
+            localStorage.removeItem("listAdded");
+            window.location.reload();
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/e1534a995a.js" crossorigin="anonymous"></script>
+</body>
+</html>

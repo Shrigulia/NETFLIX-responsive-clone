@@ -1,0 +1,357 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: #141414 ;
+    margin: 0;
+    padding: 0;
+    font-family: helvetica,arial,sans-serif;
+}
+
+/* global class */
+.active{
+    color: white;
+    font-weight: 700;
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+.bgcolor{
+    background-color: rgb(20,20,20);
+}
+/* global class end */
+
+/* header */
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.5s;
+    /* border: 2px solid white; */
+    height: 5rem;
+}
+.headerCont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* left nav */
+.leftNav{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    max-width: 150px;
+}
+.leftNavCont{
+    display: flex;
+    list-style: none;
+}
+.leftNavItem{
+    margin-right:15px;
+    cursor: pointer;
+}
+
+/* left nav end */ 
+
+/* right nav  */
+.rightNav{
+    align-items: center;
+    display: flex;
+}
+.rightNavItem{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.rightNavItem img{
+    max-width: 3rem;
+}
+/* user menu */
+#userMenu{
+    position: relative;
+}
+#signOut{
+    /* text-align: center; */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.rightNavItem .userOptCont{
+    position: absolute;
+    display: none;
+    border-radius: 10px;
+    padding: 0.1rem 0.6rem;
+    background-color: transparent;
+    width: 30vh;
+    transition: all 0.5s ;
+    right: 1px;
+}
+.rightNavItem:hover .userOptCont{
+    display: block;
+    transition: all 0.5s ;
+}
+.userOptCont .user{
+    display: flex;
+    margin-top: 2px;
+    align-items: center;
+    justify-content: space-between;
+}
+.user img{
+    width: 40px;
+}
+.user:hover{
+    /* margin-bottom: 2px; */
+    border-bottom: 1px solid white;
+}
+/* user menu end */
+
+/* right nav end */
+
+/* header end */
+
+
+/* banner */
+.bannerSec{
+    /* background-image: url(https://image.tmdb.org/t/p/original/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 98vh;
+    background-position: 69%;
+    position: relative;
+}
+.bannerCont{
+    display: flex;
+    max-width: 100%;
+    /* width: fit-content; */
+    bottom: 5rem;   
+    padding-left: 10px;
+    left: 20px;
+    /* background-color: rgba(49, 48, 48, 0.11); */
+    flex-direction: column;
+    position: absolute;
+}
+.bannerTitle{
+    font-size: 78px;
+    line-height: 1.2;
+    margin-top: 0px;
+    margin-bottom: 16px;
+    max-width: 40%;
+}
+.bannerOverview{
+    font-size: 16.4px;
+    line-height: 1.3;
+    width: 40%;
+}
+.releaseBanner{
+    font-size: 16.4px;
+    line-height: 1.3;
+    width: 40%;
+}
+.ratingBanner{
+    font-size: 16.4px;
+    line-height: 1.3;
+    width: 40%;
+}
+.btnCont{
+    display: flex;
+    align-items: center;
+}
+.actionButton{
+    border: none;
+    background-color: #fff;
+    padding: 8px 23px;
+    border-radius: 4px;
+    margin-right: 11px;
+    color: black;
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    align-items: center;
+    cursor: pointer;
+}
+.actionButton:last-child{
+    background-color: rgba(109,109,110,0.7);
+    color: white;
+}
+.actionButton svg path{
+    color: black;
+}
+.bannerFadeBottom{
+    height: 120px;
+    background: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#141414);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* banner end */
+
+
+
+
+/* movie sec  */
+.movieSec{
+
+}
+.gerneCont{
+    /* display: flex; */
+    margin: 2rem 0;
+    /* overflow: scroll; */
+}
+.movieHold{
+    display: flex;
+    overflow: scroll;
+    
+}
+.gerneCont .gerneHeading{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+    display: inline-block;
+    /* display: block !important; */
+    /* margin-bottom: 1rem; */
+}
+.gerneHeading .exploreNow{
+    font-size: 0.8rem;
+    color: #54b9c5;
+    display: none;
+    /* transition: all; */
+}
+.gerneHeading:hover .exploreNow{
+    display: inline-block;
+}
+::-webkit-scrollbar{
+    display: none   ;
+}
+.movieCont{
+    display: flex;
+    /* overflow-x:auto; */
+    /* overflow-y: visible; */
+}
+.movieRow{
+    /* width: fit-content; */
+    overflow: scroll;
+    /* border: 2px solid white; */
+    transition: all 0.3s;
+}
+.movieRow:hover{
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+.movieRowItem img{
+    width: 12rem;
+    object-fit: contain;
+    margin-right: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: all 0.5s; */
+}
+.movieRowItem p{
+    display: none;
+}
+
+.movieRowItem:hover .trailer{
+    display: block;
+}
+.movieControlCont{
+    /* border: 1px solid red; */
+    background-color: #141414;
+    width: 100%;
+    display: none;
+    transition: all 0.3s;
+
+}
+.movieRow:hover .movieControlCont{
+    display: inline-block;
+    transition: all 0.3s;
+}
+.movieControlCont div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.movieTitle p:last-child{
+    border: 2px solid black;
+    padding: 10px 10px;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    border-radius: 100px;
+}
+.movieControl i{
+    border: 1px solid grey;
+    border-radius: 100px;
+    padding: 10px 12px; 
+    transition: all 0.2s;
+    background-color: #141414;
+    cursor: pointer;
+}
+.movieControl i:first-child{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+.movieControl i:hover{
+    border-color: white;
+    transition: all 0.2s;
+}
+
+.releaseDate{
+    text-align: center;
+}
+
+/* movie sec end */
+
+/*  hamburger menu */
+header{
+    display: flex;
+}
+.toogle{
+        position: relative;
+        right: 180px;
+    }
+
+.hamburgerMenu{
+    height: 100vh;
+    background-color: #141414;
+    width: 0px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    display: none;
+}
+.hamburgerMenu div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+#menu{
+    display: none;
+    margin: auto 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.hamburgerMenu .leftNavCont {
+    display: flex;
+    flex-direction: column;
+}
+.hamburgerMenu .leftNavCont .leftNavItem {
+    margin: 1rem;
+    font-size: 1.6rem;
+}
+.hamburger_icon{
+    margin: auto;
+}

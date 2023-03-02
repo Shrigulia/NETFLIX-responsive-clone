@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEtflix - Playing Movie</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color:#141414 ;
+        }
+        iframe{
+            width: 100vw;
+            height: 99vh;
+            border: none;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <iframe id="trailerLink"  src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen></iframe>
+
+    <script>
+        let movieId = JSON.parse(localStorage.getItem("movieId"))
+        fetchMovieVideo = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=d5e4056f097f2068ae5f44246666ab84&language=en-US`
+
+        fetch(fetchMovieVideo)
+        .then(res => res.json())
+        .then((res)=>{
+            let movieKey = res.results[0].key
+            let src = document.getElementById("trailerLink")
+            src.setAttribute("src",`https://www.youtube.com/embed/${movieKey}?autoplay=1&modestbranding=1&loop=1&rel=1`)
+            // console.log(src.getAttribute("src"))
+        })
+        .catch(err => console.log(err))
+
+        
+    </script>
+</body>
+</html>

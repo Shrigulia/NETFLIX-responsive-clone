@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: #141414 ;
+    margin: 0;
+    padding: 0;
+    font-family: helvetica,arial,sans-serif;
+}
+
+/* global class */
+.active{
+    color: white;
+    font-weight: 700;
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+.bgcolor{
+    background-color: rgb(20,20,20);
+}
+/* global class end */
+
+/* header */
+header{
+    transition: all 0.5s;
+    height: 5rem;
+}
+.headerCont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* left nav */
+.leftNav{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    max-width: 150px;
+}
+.leftNavCont{
+    display: flex;
+    list-style: none;
+}
+.leftNavItem{
+    margin-right:15px;
+    cursor: pointer;
+}
+/* left nav end */ 
+
+/* right nav  */
+.rightNav{
+    align-items: center;
+    display: flex;
+}
+.rightNavItem{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.rightNavItem img{
+    max-width: 3rem;
+}
+/* user menu */
+#userMenu{
+    position: relative;
+}
+#signOut{
+    /* text-align: center; */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.rightNavItem .userOptCont{
+    position: absolute;
+    display: none;
+    border-radius: 10px;
+    padding: 0.1rem 0.6rem;
+    background-color: transparent;
+    width: 30vh;
+    transition: all 0.5s ;
+    right: 1px;
+}
+.rightNavItem:hover .userOptCont{
+    display: block;
+    transition: all 0.5s ;
+}
+.userOptCont .user{
+    display: flex;
+    margin-top: 2px;
+    align-items: center;
+    justify-content: space-between;
+}
+.user img{
+    width: 40px;
+}
+.user:hover{
+    /* margin-bottom: 2px; */
+    border-bottom: 1px solid white;
+}
+/* user menu end */
+/* right nav end */
+/* header end */
+
+
+/* movie sec  */
+.movieSec{
+
+}
+.gerneCont{
+    display: flex;
+    margin: 2rem 0;
+    /* overflow: scroll; */
+}
+.movieHold{
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow: scroll; */
+    
+}
+.gerneCont .gerneHeading{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+    display: inline-block;
+    /* display: block !important; */
+    /* margin-bottom: 1rem; */
+}
+.movieSec button{
+    font-size: 1.4rem;
+    color: white;
+    background-color: transparent;
+    border:1px solid ;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.movieSec button:hover{
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+::-webkit-scrollbar{
+    display: none   ;
+}
+.movieCont{
+    display: flex;
+    /* overflow-x:auto; */
+    /* overflow-y: visible; */
+}
+.movieRow{
+    /* width: fit-content; */
+    overflow: scroll;
+    /* border: 2px solid white; */
+    transition: all 0.3s;
+}
+.movieRow:hover{
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+.movieRowItem img{
+    width: 12rem;
+    object-fit: contain;
+    margin-right: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: all 0.5s; */
+}
+.movieRowItem p{
+    display: none;
+}
+.movieRowItem:hover .trailer{
+    display: block;
+}
+.movieControlCont{
+    /* border: 1px solid red; */
+    background-color: #141414;
+    width: 100%;
+    display: none;
+    transition: all 0.3s;
+
+}
+.movieRow:hover .movieControlCont{
+    display: inline-block;
+    transition: all 0.3s;
+}
+.movieControlCont div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.movieTitle p:last-child{
+    border: 2px solid black;
+    padding: 10px 10px;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    border-radius: 100px;
+}
+.movieControl i{
+    border: 1px solid grey;
+    border-radius: 100px;
+    padding: 10px 12px; 
+    transition: all 0.2s;
+    background-color: #141414;
+    cursor: pointer;
+}
+.movieControl i:first-child{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+.movieControl i:hover{
+    border-color: white;
+    transition: all 0.2s;
+}
+
+.releaseDate{
+    text-align: center;
+}
+
+/* movie sec end */
+

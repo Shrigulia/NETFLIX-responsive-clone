@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="indexResponsive.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="headerCont container">
+            <!-- left nav  -->
+            <nav class="leftNav">
+                <figure class="logo">
+                    <img src="images/logo.png" alt="Netflix">
+                </figure>
+                <ul class="leftNavCont">
+                    <li class="leftNavItem active">Home</li>
+                    <li class="leftNavItem">
+                        <a href="myList.html" target="_self">My list</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- left nav end -->
+
+            <!-- right nav  -->
+            <nav class="rightNav">
+
+                <div class="rightNavItem">
+                    <i class="fa fa-search fa-2x"></i>
+                </div>
+
+                <div class="rightNavItem">
+                    <img style="filter: invert(100%);" src="images/notification.png" alt="">
+                </div>
+                
+                <div class="rightNavItem" id="userMenu">
+                    <img src="images/user.jpg" alt="">
+
+                    <div class="userOptCont">
+                        <div class="user" id="user">
+                            <img src="images/user.jpg" alt="">
+                            <p>User 1</p>
+                        </div>
+
+                        <div class="user" id="user">
+                            <img src="images/user.jpg" alt="">
+                            <p>User 2</p>
+                        </div>
+
+                        <div class="user" id="user">
+                            <img src="images/user.jpg" alt="">
+                            <p>User 3</p>
+                        </div>
+
+                        <div class="user" id="user">
+                            <i class="fa fa-pencil fa-2x"></i>
+                            <p>Manage Profile</p>
+                        </div>
+
+                        <div class="user" id="user">
+                            <i class="fa fa-square fa-2x"></i>
+                            <p>Transfer profile</p>
+                        </div>
+
+                        <div class="user" id="user">
+                            <i class="fa fa-user fa-2x"></i>
+                            <p>Account</p>
+                        </div>
+
+                        <div class="user" id="user">
+                            <i class="fa fa-question-circle fa-2x"></i>
+                            <p>Help center</p>
+                        </div>
+
+                        <div class="user" id="signOut">
+                            <p>Sign out Netflix</p>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </nav>
+            <!-- right nav end -->
+        </div>
+        <div class="hamburger_icon">
+            <i class="fa fa-bars" id="menu"></i>
+        </div>
+        <nav class="hamburgerMenu" id="hamburgerMenu">
+            <ul class="leftNavCont">
+                <li class="leftNavItem active">Home</li>
+            </ul> 
+            <div class="rightNavItem">
+                <i class="fa fa-search fa-2x"></i>
+            </div>
+
+            <div class="rightNavItem">
+                <img style="filter: invert(100%);" src="images/notification.png" alt="">
+            </div>
+
+            <div class="user" id="user">
+                <i class="fa fa-pencil fa-2x"></i>
+                <p>Manage Profile</p>
+            </div>
+
+            <div class="user" id="user">
+                <i class="fa fa-user fa-2x"></i>
+                <p>Account</p>
+            </div>
+
+            <div class="user" id="user">
+                <i class="fa fa-question-circle fa-2x"></i>
+                <p>Help center</p>
+            </div>
+
+            <div class="user" id="signOut">
+                <p>Sign out Netflix</p>
+            </div>
+        </nav>
+        
+    </header>
+    <!-- header end -->
+
+    <!-- banner -->
+    <section class="bannerSec" id="bannerSec">
+        <div class="bannerCont">
+            <!-- <h2 class="bannerTitle">The Walking Dead</h2>
+            <p class="bannerOverview">4th in trening</p>
+            <p class="releaseBanner">release</p>
+            <p class="ratingBanner">20</p>
+            <div class="btnCont">
+                <button class="actionButton"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard"><path d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z" fill="currentColor"></path></svg>&nbsp;&nbsp;&nbsp;Play</button>
+
+                <button class="actionButton"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM13 10V18H11V10H13ZM12 8.5C12.8284 8.5 13.5 7.82843 13.5 7C13.5 6.17157 12.8284 5.5 12 5.5C11.1716 5.5 10.5 6.17157 10.5 7C10.5 7.82843 11.1716 8.5 12 8.5Z" fill="currentColor"></path></svg>&nbsp;&nbsp;&nbsp;More info</button>
+            </div> -->
+        </div>
+        <div class="bannerFadeBottom"></div>
+    </section>
+    <!-- banner end -->
+
+    <!-- movie section -->
+    <section class="movieSec container" id="movieSec">  
+        <!-- <h2 class="gerneHeading">Trending Now
+            <a href="indexSec.html">
+                <span class="exploreNow">Explore Now</span>
+            </a>
+        </h2>
+        <div class="gerneCont container" > -->
+            <!-- <div class="movieCont" id="movieCont">
+                <div class="movieRow">
+                    <div class="movieRowItem" id="movieRowItem">
+                        <img  src="https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABYO_pX_Yh8QzdAHH-1EQUPODHmFwr73SRctABm1jOUTg6LsoYFR7mtdqLF3h_ur6IiGmN3MYgJYxKKDzX2HiWNxIbKRLoXpRQ4Imc4XLjl35TWNPdWMuOW0TVu_sGQNiIjINDg.jpg?r=d40" alt="">
+                    </div>
+                    <div class="movieControlCont">
+                        <div class="movieTitle">
+                            <p>All Of Us Are Dead</p>
+                            <p>10</p>
+                        </div>
+                        <div class="movieControl">
+                            <i id="play" class="fa fa-play"></i>
+                            <i class="fa fa-plus"></i>
+                            <i class="fa fa-thumbs-up" id="addToList"></i>
+                            <i class="fa fa-thumbs-down"></i>
+                        </div>
+                        <div style="margin-top: 20px;margin-bottom: 4px;" class="releaseDate">
+                            Release | 2022-10-12
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div> -->
+    </section>
+    <!-- movie section end -->
+
+
+
+
+
+
+
+    <!-- <script src="debug.js"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>

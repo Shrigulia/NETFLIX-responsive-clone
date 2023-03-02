@@ -1,0 +1,87 @@
+@media screen and (max-width:1333px) {
+    .container{
+        max-width: 1200px;
+    }
+}
+@media screen and (max-width:883px) {
+    .container{
+        max-width: 800px;
+    }
+    .titleCont p{
+        display: none;
+    }
+}
+@media screen and (max-width:770px) {
+    .container{
+        max-width: 700px;
+    }
+    .movieRowItem img{
+        width: 7rem;
+    }
+    .controlsCont h2:hover{
+        letter-spacing: 0px;
+        transition: all 0.2s;
+        background-color:transparent;
+    }
+}
+@media screen and (max-width:697px){ 
+    .movieDetailCont .controlsCont {
+        padding: 0;
+    }
+}
+@media screen and (max-width:590px){
+    .controlsCont h2 {
+        padding: 0.3rem;
+        margin: 5rem 0;
+    }
+    .movieCont .movieImgCont {
+        background-position:69%;
+    }
+}
+@media screen and (max-width:483px){
+    .controlsCont h2 {
+        margin: 2rem 0;
+        letter-spacing: 0px;
+        margin: 5rem 0;
+        font-size: 1.1rem;
+    }
+    .container{
+        max-width: 480px;
+    }
+    .movieCont .movieDetailCont {
+        width: 50%;
+        padding: 1rem 1rem;
+    }
+    .movieCont .movieImgCont {
+        background-position: 69%;
+    }
+}
+
+@media screen and (max-width:459px){
+    .movieRowItem img{
+        width: 6rem;
+    }
+    .container{
+        max-width: 410px;
+    }
+    .movieDetailCont .titleCont h2 {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:390px){
+    .container{
+        max-width: 350px;
+    }
+    .movieRowItem img{
+        width: 5rem;
+    }
+}
+@media screen and (max-width:326px){
+    .movieDetailCont .titleCont h2 {
+        font-size: 1.6rem;
+    }
+
+}
+
+
+

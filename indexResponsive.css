@@ -1,0 +1,80 @@
+@media screen and (max-width:1115px) {
+    .bannerSec{
+        background-position: 69%;
+    }
+    .container{
+        max-width: 1090px;
+    }
+}
+
+@media(max-width:757px){
+    .hamburgerMenu{
+        overflow: auto;
+        width: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+ 
+}
+@media screen and (max-width:688px) {
+    .bannerTitle{
+        font-size: 67px;
+    }
+    .container{
+        max-width: 670px;
+    }
+    .movieRowItem img {
+        width: 9rem;
+    }
+    .movieRow:hover .movieControlCont{
+        display: none;
+        transition: all 0.3s;
+    }
+}
+@media screen and (max-width:579px) {
+    .bannerTitle{
+        font-size: 2rem;
+    }
+    .hamburgerMenu{
+        display: block;
+    }
+    #menu{
+        display: block;
+    }
+    .leftNavCont{
+        display: none;
+    }
+    .rightNav{
+        display: none;
+    }
+    .bannerOverview {
+        font-size: 0.6rem;
+    }
+    .bannerSec{
+        background-position: 69%;
+    }
+    .movieRowItem img {
+        width: 7rem;
+    }
+    .container{
+        max-width: 480px;
+    }
+}
+@media screen and (max-width:396px) {
+    .bannerTitle{
+        font-size: 2rem;
+    }
+    .container{
+        max-width: 380px;
+    }
+    .movieRowItem img {
+        width: 5rem;
+    }
+}
+@media screen and (max-width:338px){
+    .hamburgerMenu {
+        z-index: 2;
+    }
+}

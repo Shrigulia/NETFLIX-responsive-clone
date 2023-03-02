@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+    user-select: none;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: #141414 ;
+    margin: 0;
+    padding: 0;
+    font-family: helvetica,arial,sans-serif;
+}
+
+/* global class */
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+.bgcolor{
+    background-color: rgb(20,20,20);
+}
+/* global class end */
+
+.movieCont{
+    display: flex;
+}
+.movieCont .movieDetailCont{
+    width: 50%;
+    background-color: #141414;
+    height: 100vh;
+    padding: 1rem 2rem;
+}
+.movieDetailCont .titleCont h2{
+    font-size: 3rem;
+}
+.titleCont p{
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+.movieDetailCont .controlsCont{
+    padding: 0rem 2rem;
+}
+.controlsCont h2{
+    cursor: pointer;
+    margin: 3rem 0;
+    border:1px solid white;
+    padding: 1rem;
+    transition: all 0.2s;
+    letter-spacing: 1px;
+}
+.controlsCont h2:hover{
+    letter-spacing: 2px;
+    transition: all 0.2s;
+    background-color: rgba(128, 128, 128, 0.555);
+}
+
+.movieCont .movieImgCont{
+    width: 50%;
+    /* background-color: green; */
+    position: relative;
+    height: 100vh;
+    /* background-image: url("https://image.tmdb.org/t/p/original/sv1xJUazXeYqALzczSZ3O6nkH75.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 69%;
+}
+.movieImgCont figure img{
+    width: 100%;
+    height: 100vh;
+}
+/* fade effetc */
+.fadeLeft{
+    height: 120px;
+    background: linear-gradient(270deg,transparent,rgba(37,37,37,.61),#141414);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* movie sec  */
+.movieSec{
+
+}
+.gerneCont{
+    /* display: flex; */
+    margin: 2rem 0;
+    /* overflow: scroll; */
+}
+.movieHold{
+    display: flex;
+    overflow: scroll;
+    
+}
+.gerneCont .gerneHeading{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+    display: inline-block;
+    /* display: block !important; */
+    /* margin-bottom: 1rem; */
+}
+.gerneHeading .exploreNow{
+    font-size: 0.8rem;
+    color: #54b9c5;
+    display: none;
+    /* transition: all; */
+}
+.gerneHeading:hover .exploreNow{
+    display: inline-block;
+}
+::-webkit-scrollbar{
+    display: none   ;
+}
+.movieCont{
+    display: flex;
+    /* overflow-x:auto; */
+    /* overflow-y: visible; */
+}
+.movieRow{
+    /* width: fit-content; */
+    overflow: scroll;
+    /* border: 2px solid white; */
+    transition: all 0.3s;
+}
+.movieRow:hover{
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+.movieRowItem img{
+    width: 12rem;
+    object-fit: contain;
+    margin-right: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: all 0.5s; */
+}
+.movieRowItem p{
+    display: none;
+}
+
+.movieRowItem:hover .trailer{
+    display: block;
+}
+.movieControlCont{
+    /* border: 1px solid red; */
+    background-color: #141414;
+    width: 100%;
+    display: none;
+    transition: all 0.3s;
+
+}
+.movieRow:hover .movieControlCont{
+    display: inline-block;
+    transition: all 0.3s;
+}
+.movieControlCont div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.movieTitle p:last-child{
+    border: 2px solid black;
+    padding: 10px 10px;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    border-radius: 100px;
+}
+.movieControl i{
+    border: 1px solid grey;
+    border-radius: 100px;
+    padding: 10px 12px; 
+    transition: all 0.2s;
+    background-color: #141414;
+    cursor: pointer;
+}
+.movieControl i:first-child{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+.movieControl i:hover{
+    border-color: white;
+    transition: all 0.2s;
+}
+
+.releaseDate{
+    text-align: center;
+}
+
+.gerneCont{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* movie sec end */
+
+
+
