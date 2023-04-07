@@ -184,6 +184,14 @@ header{
 .actionButton svg path{
     color: black;
 }
+.bannerFadeLeft{
+    height: 100vh;
+    background: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#141414);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 .bannerFadeBottom{
     height: 120px;
     background: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#141414);
